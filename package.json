@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/web-Nuo/frontmatter-cli/issues"
   },
-  "homepage": "https://github.com/web-Nuo/frontmatter-cli#readme"
+  "homepage": "https://github.com/web-Nuo/frontmatter-cli#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  }
 }
