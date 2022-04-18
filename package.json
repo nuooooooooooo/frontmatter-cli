@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A CLI tool to create Markdown files with frontmatter",
   "main": "bin/index.js",
+  "bin": {
+    "frontmatter-cli": "bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
