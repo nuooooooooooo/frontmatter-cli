@@ -1,0 +1,24 @@
+{
+  "name": "frontmatter-cli",
+  "version": "0.0.1",
+  "description": "A CLI tool to create Markdown files with frontmatter",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-Nuo/frontmatter-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "frontmatter",
+    "md"
+  ],
+  "author": "Manon Locht",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-Nuo/frontmatter-cli/issues"
+  },
+  "homepage": "https://github.com/web-Nuo/frontmatter-cli#readme"
+}
