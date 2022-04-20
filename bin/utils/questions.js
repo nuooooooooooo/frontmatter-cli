@@ -3,6 +3,7 @@ const homescreenQuestions = [
   {
     type: "list",
     name: "chosenOption",
+    message: "What do you want to do?",
     choices: ["Create blog post", "Settings"],
   },
 ];
@@ -27,7 +28,7 @@ const settingQuestions = [
     name: "frontmatterElements",
     message: "Choose the elements you want in your frontmatter",
     choices: [
-      { name: "title", checked: true },
+      { name: "title", checked: true, disabled: "compulsory" },
       { name: "author", checked: true },
       { name: "layout", checked: true },
       { name: "date", checked: true },

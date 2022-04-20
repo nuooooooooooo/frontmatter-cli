@@ -1,4 +1,5 @@
 {
     "author": "Your name",
-    "fileSaveLocation": "."
+    "saveLocation": ".",
+    "frontMatterElements": []
 }
