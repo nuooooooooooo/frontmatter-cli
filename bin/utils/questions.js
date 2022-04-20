@@ -1,5 +1,5 @@
 // only shown on first use
-const basicInterface = [
+const homescreenQuestions = [
   {
     type: "list",
     name: "chosenOption",
@@ -70,7 +70,7 @@ const settingQuestions = [
 ];
 
 // shown when a user uses the cli
-const usualQuestions = [
+const createPostQuestions = [
   {
     type: "input",
     name: "postTitle",
@@ -88,7 +88,7 @@ const usualQuestions = [
 
 
 
-module.exports.basicInterface = homescreenQuestions;
+module.exports.homescreenQuestions = homescreenQuestions;
 module.exports.settingQuestions = settingQuestions;
-module.exports.usualQuestions = createPostQuestions;
+module.exports.createPostQuestions = createPostQuestions;
 
