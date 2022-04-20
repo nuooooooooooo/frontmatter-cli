@@ -6,16 +6,14 @@ let postTitle = "default name";
 
 const inquirer = require("inquirer");
 const {
-  setupQuestions,
-  advancedSettings,
-  usualQuestions,
-  customSaveLocation,
-  basicInterface,
+  settingQuestions,
+  createPostQuestions,
+  homescreenQuestions,
 } = require("./utils/questions.js");
 
-inquirer.prompt(basicInterface).then((answers) => {
+inquirer.prompt(homescreenQuestions).then((answers) => {
   if (answers.chosenOption === "Create blog post") {
-    inquirer.prompt(usualQuestions).then((answers) => {
+    inquirer.prompt(createPostQuestions).then((answers) => {
       postTitle = answers.postTitle;
       filePath = `./${postTitle.split(" ").join("-")}.md`;
       postTitle = postTitle
@@ -52,7 +50,7 @@ inquirer.prompt(basicInterface).then((answers) => {
       console.log("created " + filePath);
     });
   } else {
-    inquirer.prompt(setupQuestions).then((answers) => {
+    inquirer.prompt(settingQuestions).then((answers) => {
       console.log(JSON.stringify(answers, null, '  '));
     });
   }

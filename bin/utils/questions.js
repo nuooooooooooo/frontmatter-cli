@@ -7,7 +7,7 @@ const basicInterface = [
   },
 ];
 
-const setupQuestions = [
+const settingQuestions = [
   {
     type: "input",
     name: "author",
@@ -88,7 +88,7 @@ const usualQuestions = [
 
 
 
-module.exports.basicInterface = basicInterface;
-module.exports.setupQuestions = setupQuestions;
-module.exports.usualQuestions = usualQuestions;
+module.exports.basicInterface = homescreenQuestions;
+module.exports.settingQuestions = settingQuestions;
+module.exports.usualQuestions = createPostQuestions;
 
