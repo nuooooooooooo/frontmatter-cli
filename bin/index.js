@@ -11,6 +11,11 @@ const {
   homescreenQuestions,
 } = require("./utils/questions.js");
 
+const {
+  defaultFrontMatter, 
+  customFrontMatter
+} = require("./utils/frontmatter")
+
 inquirer.prompt(homescreenQuestions).then((answers) => {
   if (answers.chosenOption === "Create blog post") {
     inquirer.prompt(createPostQuestions).then((answers) => {
@@ -22,26 +27,7 @@ inquirer.prompt(homescreenQuestions).then((answers) => {
         .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
         .join(" ");
 
-      let frontMatter = `---
-          setup: |
-          import xxx from '../../layouts/xxx.astro'
-          import xxx from '../../components/xxx.astro'
-          title: ${postTitle}
-          date: ${new Date().toLocaleDateString("en-us", {
-            weekday: "short",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
-          author: Manon Locht
-          tags: ['first','second']
-          description: This is my blogpost description
-          ---
-          # ${postTitle}
-          This is where the content goes
-          `;
-
-      fs.writeFile(filePath, frontMatter, { flag: "ax" }, (err) => {
+      fs.writeFile(filePath, defaultFrontMatter(postTitle, "Manon Locht"), { flag: "ax" }, (err) => {
         if (err) {
           console.error(err);
           return;
