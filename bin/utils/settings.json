@@ -1,5 +1,14 @@
 {
-    "author": "Your name",
-    "saveLocation": ".",
-    "frontMatterElements": []
+  "author": "GH",
+  "frontmatterSettings": "Advanced",
+  "frontmatterElements": [
+    "author",
+    "layout",
+    "date",
+    "description",
+    "tags",
+    "category",
+    "slug"
+  ],
+  "saveLocation": "Current folder"
 }
