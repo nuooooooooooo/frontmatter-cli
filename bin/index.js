@@ -3,8 +3,7 @@ const fs = require("fs");
 const path = require("path")
 
 let filePath = "./default-name.md";
-let settingsFile = 'settings.json'
-settingsFile = path.join(__dirname,"utils", "settings.json")
+let settingsFile = path.join(__dirname,"utils", "settings.json")
 
 const inquirer = require("inquirer");
 const {
@@ -13,7 +12,7 @@ const {
   homescreenQuestions,
 } = require("./utils/questions.js");
 
-const { defaultFrontMatter, buildFrontMatter } = require("./utils/frontmatter");
+const { buildFrontMatter } = require("./utils/frontmatter");
 
 inquirer.prompt(homescreenQuestions).then((answers) => {
   if (answers.chosenOption === "Create blog post") {
@@ -41,7 +40,6 @@ inquirer.prompt(homescreenQuestions).then((answers) => {
     });
   } else {
     inquirer.prompt(settingQuestions).then((answers) => {
-      //buildFrontMatter(answers.frontmatterElements, answers.author)
       const settings = JSON.stringify(answers, null, "  ");
       console.log(settings)
       fs.writeFile(settingsFile, settings, { flag: "w" }, (err) => {
