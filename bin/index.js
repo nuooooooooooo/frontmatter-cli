@@ -13,7 +13,7 @@ const {
 
 const {
   defaultFrontMatter, 
-  customFrontMatter
+  buildFrontMatter
 } = require("./utils/frontmatter")
 
 inquirer.prompt(homescreenQuestions).then((answers) => {
@@ -27,17 +27,19 @@ inquirer.prompt(homescreenQuestions).then((answers) => {
         .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
         .join(" ");
 
-      fs.writeFile(filePath, defaultFrontMatter(postTitle, "Manon Locht"), { flag: "ax" }, (err) => {
+      fs.writeFile(filePath, buildFrontMatter(["author", "layout", "date"],"test",postTitle), { flag: "ax" }, (err) => {
         if (err) {
           console.error(err);
-          return;
+        } else {
+          console.log("created " + filePath);
         }
       });
-      console.log("created " + filePath);
     });
   } else {
     inquirer.prompt(settingQuestions).then((answers) => {
-      console.log(JSON.stringify(answers, null, '  '));
+      //buildFrontMatter(answers.frontmatterElements, answers.author)
+      const settings = JSON.stringify(answers, null, '  ');
+      console.log(settings)
     });
   }
 });
