@@ -92,4 +92,3 @@ const createPostQuestions = [
 module.exports.homescreenQuestions = homescreenQuestions;
 module.exports.settingQuestions = settingQuestions;
 module.exports.createPostQuestions = createPostQuestions;
-

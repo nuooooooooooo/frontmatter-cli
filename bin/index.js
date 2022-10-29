@@ -46,7 +46,7 @@ inquirer.prompt(homescreenQuestions).then((answers) => {
         if (err) {
           console.error(err);
         } else {
-          console.log("created " + filePath);
+          console.log("Settings saved!");
         }
       });
       
