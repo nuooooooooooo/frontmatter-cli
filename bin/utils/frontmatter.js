@@ -27,7 +27,7 @@ const buildFrontMatter = (
   });
 
   frontmatterStr += `---\n# ${postTitle}`;
-  console.log(frontmatterStr);
+  //console.log(frontmatterStr);
   return frontmatterStr;
 };
 
