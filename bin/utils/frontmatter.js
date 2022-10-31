@@ -17,7 +17,7 @@ const buildFrontMatter = (
     description: `description: `,
     tags: `tags: `,
     category: `category: `,
-    slug: `slug: `,
+    slug: `slug: ${postTitle.split(" ").join("-").toLowerCase()}`,
   };
 
   let frontmatterStr = `---\ntitle: ${postTitle}\n`;

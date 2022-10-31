@@ -21,7 +21,7 @@ const settingQuestions = [
     type: "list",
     name: "frontmatterSettings",
     message: "Frontmatter variables: ",
-    choices: ["Default (based on the Astro blog starter)", "Advanced"],
+    choices: ["Default", "Advanced"],
   },
   {
     type: "checkbox",

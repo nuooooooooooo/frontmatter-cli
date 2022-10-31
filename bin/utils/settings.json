@@ -1,5 +1,5 @@
 {
-  "author": "Manon Locht",
+  "author": "Bubble Tea",
   "frontmatterSettings": "Advanced",
   "frontmatterElements": [
     "author",
@@ -10,5 +10,6 @@
     "category",
     "slug"
   ],
-  "saveLocation": "Current folder"
+  "saveLocation": "Current folder",
+  "saveFilePath": "."
 }
